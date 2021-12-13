@@ -3,50 +3,67 @@
 
     internal class TableHandling
     {
-        public int tableWidth; //X
-        public int tableHeight; //Y
+        //public int tableWidth; //X
+        //public int tableHeight; //Y
 
-        List<List<int>> frame1 = new List<List<int>>();
-        List<List<int>> frame2 = new List<List<int>>();
+        //public List<List<int>> frame1 = new List<List<int>>();
+        //public List<List<int>> frame2 = new List<List<int>>();
 
 
-        public void generateTable()
+        //public void generateTable()
+        //{
+
+        //    (int, int) tableSize = (50, 50);
+        //        /*DataHandling.receiveTableSize();*/
+
+        //    tableWidth = tableSize.Item1;
+        //    tableHeight = tableSize.Item2;
+
+
+        //    for (int i = 0; i < tableHeight; i++)
+        //    {
+        //        List<int> wiersz = new List<int>();
+        //        frame1.Add(wiersz);
+        //        frame2.Add(wiersz);
+
+
+        //        frame1[i].AddRange(Enumerable.Repeat(0, tableWidth));
+        //        frame2[i].AddRange(Enumerable.Repeat(0, tableWidth));
+        //    }
+
+        //    for (int i = 0; i < tableWidth; i++)
+        //    {
+        //        for (int j = 0; j < tableHeight; j++)
+        //        {
+        //            frame1[i][j] = 0;
+        //            frame2[i][j] = 0;
+
+        //        }
+        //    }
+        //}
+        public void showTable(Patterns pat)
         {
 
-            (int, int) tableSize = DataHandling.receiveTableSize();
-
-            tableWidth = tableSize.Item1;
-            tableHeight = tableSize.Item2;
-
-
-            for (int i = 0; i < tableHeight; i++)
+            for (int i = 0; i < Patterns.tabHeight; i++)
             {
-                List<int> wiersz = new List<int>();
-                frame1.Add(wiersz);
-                frame2.Add(wiersz);
-
-
-                frame1[i].AddRange(Enumerable.Repeat(0, tableWidth));
-                frame2[i].AddRange(Enumerable.Repeat(0, tableWidth));
-            }
-
-            for (int i = 0; i < tableWidth; i++)
-            {
-                for (int j = 0; j < tableHeight; j++)
+                for (int j = 0; j < Patterns.tabWidth; j++)
                 {
-                    frame1[i][j] = 0;
-                    frame2[i][j] = 0;
+                    Console.Write(pat.board[i][j] + " ");
 
                 }
+                Console.WriteLine();
             }
+
+            
         }
-        public void showTable()
+
+        public void showTable2(Patterns pat)
         {
-            for (int i = 0; i < tableHeight; i++)
+            for (int i = 0; i < Patterns.tabHeight; i++)
             {
-                for (int j = 0; j < tableWidth; j++)
+                for (int j = 0; j < Patterns.tabWidth; j++)
                 {
-                    Console.Write(frame2[i][j] + " ");
+                    Console.Write(pat.board2[i][j] + " ");
 
                 }
                 Console.WriteLine();
