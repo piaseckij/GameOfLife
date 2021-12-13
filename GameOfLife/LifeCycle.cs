@@ -19,7 +19,7 @@
 
                     if (suma == 2 || suma == 3)
                     {
-                        pat.board2[i-1][j-1] = 1;
+                        pat.board2[i][j] = 1;
 
                     }
                     else
