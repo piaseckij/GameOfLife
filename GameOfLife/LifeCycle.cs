@@ -14,17 +14,17 @@
 
                     suma = 0;
 
-                    suma = pat.board[i - 1][j] + pat.board[i + 1][j] + pat.board[i][j - 1] + pat.board[i][j + 1] +
-                        pat.board[i - 1][j + 1] + pat.board[i + 1][j + 1] + pat.board[i - 1][j - 1] + pat.board[i - 1][j + 1];
+                    suma = pat.board[i - 1,j] + pat.board[i + 1,j] + pat.board[i,j - 1] + pat.board[i,j + 1] +
+                        pat.board[i - 1,j + 1] + pat.board[i + 1,j + 1] + pat.board[i - 1,j - 1] + pat.board[i - 1,j + 1];
 
                     if (suma == 2 || suma == 3)
                     {
-                        pat.board2[i-1][j-1] = 1;
+                        pat.board2[i,j] = 1;
 
                     }
                     else
                     {
-                        pat.board2[i][j] = 0;
+                        pat.board2[i,j] = 0;
                     }
 
 

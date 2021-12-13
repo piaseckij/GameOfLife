@@ -48,7 +48,7 @@
             {
                 for (int j = 0; j < Patterns.tabWidth; j++)
                 {
-                    Console.Write(pat.board[i][j] + " ");
+                    Console.Write(pat.board[i,j] + " ");
 
                 }
                 Console.WriteLine();
@@ -63,7 +63,7 @@
             {
                 for (int j = 0; j < Patterns.tabWidth; j++)
                 {
-                    Console.Write(pat.board2[i][j] + " ");
+                    Console.Write(pat.board2[i,j] + " ");
 
                 }
                 Console.WriteLine();

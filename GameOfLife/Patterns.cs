@@ -8,22 +8,19 @@ namespace GameOfLife
         public const int tabWidth = 25;
         public const int tabHeight = 25;
 
-        public List<List<int>> board = new List<List<int>>();
-        public List<List<int>> board2 = new List<List<int>>();
+        public int[,] board = new int[tabWidth, tabHeight];
+        public int[,] board2 = new int[tabWidth, tabHeight];
+
 
         public Patterns()
         {
             for (int i = 0; i < tabHeight; i++)
             {
-                List<int> row = new List<int>();
-                List<int> row2 = new List<int>();
-
-
-                board.Add(row);
-                board2.Add(row2);
-
-                board[i].AddRange(Enumerable.Repeat(0, tabWidth));
-                board2[i].AddRange(Enumerable.Repeat(0, tabWidth));
+                for (int j = 0; j < tabWidth; j++)
+                {
+                    board[i, j] = 0;
+                    board2[i, j] = 0;
+                }
             }
         }
 
@@ -34,9 +31,9 @@ namespace GameOfLife
 
         public block() : base()
         {
-            board[11][12] = 1;
-            board[12][12] = 1;
-            board[13][12] = 1;
+            board[11,12] = 1;
+            board[12,12] = 1;
+            board[13,12] = 1;
 
         }
     }
