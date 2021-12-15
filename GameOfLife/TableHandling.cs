@@ -3,7 +3,7 @@
 
     internal static class TableHandling
     {
-        public static void showTable(Patterns pat)
+        public static void ShowTable(Patterns pat)
         {
 
             for (int i = 0; i < Patterns.tabHeight; i++)

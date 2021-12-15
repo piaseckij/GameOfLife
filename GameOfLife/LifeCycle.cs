@@ -3,8 +3,11 @@
     internal static class LifeCycle
     {
 
-        public static void checkDie(Patterns pat)
+        public static void CheckDie(Patterns pat)
         {
+
+            
+
             int suma;
             for (int i = 1; i < Patterns.tabHeight - 1; i++)
             {
@@ -50,14 +53,14 @@
             Patterns.ClearTable(pat.board2);
 
         }
-        public static void live(Patterns pat)
+        public static void Live(Patterns pat)
         {
             int z = 0;
             do
             {
 
-                TableHandling.showTable(pat);
-                checkDie(pat);
+                TableHandling.ShowTable(pat);
+                CheckDie(pat);
                 Thread.Sleep(1000);
                 Console.Clear();
 

@@ -29,32 +29,32 @@
                 {
                     case 1:
                         BeeHive bee = new BeeHive();
-                        LifeCycle.live(bee);
+                        LifeCycle.Live(bee);
                         break;
 
                     case 2:
                         Loaf loaf = new Loaf();
-                        LifeCycle.live(loaf);
+                        LifeCycle.Live(loaf);
                         break;
                     case 3:
                         Boat boat = new Boat();
-                        LifeCycle.live(boat);
+                        LifeCycle.Live(boat);
                         break;
                     case 4:
                         Block block = new Block();
-                        LifeCycle.live(block);
+                        LifeCycle.Live(block);
                         break;
                     case 5:
                         Tub tub = new Tub();
-                        LifeCycle.live(tub);
+                        LifeCycle.Live(tub);
                         break;
                     case 6:
                         Blinker blink = new Blinker();
-                        LifeCycle.live(blink);
+                        LifeCycle.Live(blink);
                         break;
                     case 7:
                         Glider glider = new Glider();
-                        LifeCycle.live(glider);
+                        LifeCycle.Live(glider);
                         break;
 
                 }
