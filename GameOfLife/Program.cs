@@ -13,12 +13,12 @@
                 "3.Boat\n" +
                 "4.Block\n" +
                 "5.Tub\n" +
-                "6.Blinker\n"+
+                "6.Blinker\n" +
                 "7.Glider\n");
 
             bool success = int.TryParse(Console.ReadLine(), out input);
 
-            if (!success||input<0||input>7)
+            if (!success || input < 0 || input > 7)
             {
                 Console.WriteLine("Błąd we wprowadzeniu");
             }

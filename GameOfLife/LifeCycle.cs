@@ -6,7 +6,7 @@
         public static void CheckDie(Patterns pat)
         {
 
-            
+
 
             int suma;
             for (int i = 1; i < Patterns.tabHeight - 1; i++)
@@ -36,7 +36,7 @@
                     }
                     else
                     {
-                     
+
                         pat.board2[i, j] = 0;
                     }
 
@@ -48,7 +48,7 @@
             pat.board2 = pat.board;
             pat.board = temp;
 
-            
+
 
             Patterns.ClearTable(pat.board2);
 
