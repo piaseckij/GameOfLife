@@ -18,7 +18,7 @@
 
             bool success = int.TryParse(Console.ReadLine(), out input);
 
-            if (!success)
+            if (!success||input<0||input>7)
             {
                 Console.WriteLine("Błąd we wprowadzeniu");
             }
