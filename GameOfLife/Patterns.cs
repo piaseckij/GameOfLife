@@ -3,41 +3,120 @@ namespace GameOfLife
 {
     internal class Patterns
     {
-        TableHandling tab;
+
 
         public const int tabWidth = 25;
         public const int tabHeight = 25;
 
-        public List<List<int>> board = new List<List<int>>();
-        public List<List<int>> board2 = new List<List<int>>();
+        public int[,] board = new int[tabWidth, tabHeight];
+        public int[,] board2 = new int[tabWidth, tabHeight];
 
-        public Patterns()
+        public static void ClearTable(int[,] tab)
         {
             for (int i = 0; i < tabHeight; i++)
             {
-                List<int> row = new List<int>();
-                List<int> row2 = new List<int>();
-
-
-                board.Add(row);
-                board2.Add(row2);
-
-                board[i].AddRange(Enumerable.Repeat(0, tabWidth));
-                board2[i].AddRange(Enumerable.Repeat(0, tabWidth));
+                for (int j = 0; j < tabWidth; j++)
+                {
+                    tab[i, j] = 0;
+                    tab[i, j] = 0;
+                }
             }
+        }
+
+        public Patterns()
+        {
+            ClearTable(board);
+            ClearTable(board2);
         }
 
     }
 
-    class block : Patterns
+    class Block : Patterns
     {
 
-        public block() : base()
+        public Block() : base()
         {
-            board[11][12] = 1;
-            board[12][12] = 1;
-            board[13][12] = 1;
+            board[11, 12] = 1;
+            board[11, 13] = 1;
+            board[12, 12] = 1;
+            board[12, 13] = 1;
+        }
+    }
 
+    class BeeHive : Patterns
+    {
+        public BeeHive() : base()
+        {
+            board[12, 12] = 1;
+            board[12, 13] = 1;
+            board[11, 14] = 1;
+            board[10, 12] = 1;
+            board[10, 13] = 1;
+            board[11, 11] = 1;
+
+        }
+
+    }
+
+    class Loaf : Patterns
+    {
+        public Loaf() : base()
+        {
+            board[10, 11] = 1;
+            board[10, 12] = 1;
+            board[11, 13] = 1;
+            board[12, 13] = 1;
+            board[13, 12] = 1;
+            board[12, 11] = 1;
+            board[11, 10] = 1;
+        }
+    }
+
+    class Boat : Patterns
+    {
+        public Boat() : base()
+        {
+            board[13, 12] = 1;
+            board[11, 12] = 1;
+            board[12, 13] = 1;
+            board[12, 11] = 1;
+            board[11, 11] = 1;
+
+        }
+    }
+
+    class Tub : Patterns
+    {
+        public Tub() : base()
+        {
+            board[13, 12] = 1;
+            board[11, 12] = 1;
+            board[12, 13] = 1;
+            board[12, 11] = 1;
+
+        }
+    }
+
+    class Glider : Patterns
+    {
+        public Glider() : base()
+        {
+            board[9, 12] = 1;
+            board[10, 13] = 1;
+            board[10, 14] = 1;
+            board[9, 14] = 1;
+            board[8, 14] = 1;
+
+        }
+    }
+
+    class Blinker : Patterns
+    {
+        public Blinker() : base()
+        {
+            board[11, 12] = 1;
+            board[12, 12] = 1;
+            board[13, 12] = 1;
         }
     }
 }
