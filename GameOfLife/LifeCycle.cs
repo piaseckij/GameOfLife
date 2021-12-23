@@ -5,8 +5,8 @@
 
         public static void CheckDie(Patterns pat)
         {
-
             int suma;
+
 
 
             for (int i = 1; i < Patterns.tabHeight - 1; i++)
